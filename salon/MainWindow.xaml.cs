@@ -21,7 +21,22 @@ namespace salon
             InitializeComponent();
         }
 
+        public object NewButton_Click { get; private set; }
+
         private void Image_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Content.Children.Clear();
+            Login login = new Login();
+            Content.Children.Add(login);
+            Window1 window1 = new Window1();
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
         }

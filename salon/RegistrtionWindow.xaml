@@ -1,0 +1,31 @@
+﻿<Window x:Class="salon.RegistrtionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:salon"
+        mc:Ignorable="d"
+        Title="RegistrtionWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock>Введите логин</TextBlock>
+        <TextBox Grid.Row="1"></TextBox>
+        <TextBlock Grid.Row="2" >Придумайте пароль</TextBlock>
+        <PasswordBox Grid.Row="3"></PasswordBox>
+        <TextBlock Grid.Row="4">Поддердите пароль</TextBlock>
+        <PasswordBox Grid.Row="5"></PasswordBox>
+        <CheckBox Name="Check" Grid.Row="6">Принимаю все условия пользования сервисом</CheckBox>
+        <Button Click="ButtonBase_OnClick" Grid.Row="7">Зарегистрироваться</Button>
+    </Grid>
+</Window>
