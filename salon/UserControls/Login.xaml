@@ -16,23 +16,41 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock
+            Margin="5"
             Foreground="White"
+            HorizontalAlignment="Left"
             FontFamily="Arial  Bold"
+            VerticalAlignment="Center"
             FontSize="25"
             >Log In:</TextBlock>
         <TextBox Grid.Row="1" Name="LogIn"
-                 Foreground="Black"
+                 Margin="5"
+                 BorderThickness="0,0,0,3"
+                 Width="300"
+                 Background="#272537"
+                 HorizontalAlignment="Left"
+                 Foreground="White"
                  FontFamily="Arial  Bold"
+                 Height="40"
                  FontSize="25"
                  ></TextBox>
         <TextBlock Grid.Row="2"
+                   Margin="5"
                    Foreground="White"
+                   HorizontalAlignment="Left"
                    FontFamily="Arial  Bold"
+                   VerticalAlignment="Center"
                    FontSize="25"
                    >Password:</TextBlock>
         <PasswordBox Grid.Row="3" Name="Password"
-                     Foreground="Black"
+                     Margin="5"
+                     BorderThickness="0,0,0,3"
+                     Width="300"
+                     Background="#272537"
+                     HorizontalAlignment="Left"
+                     Foreground="White"
                      FontFamily="Arial  Bold"
+                     Height="40"
                      FontSize="25"
                      ></PasswordBox>
         <Button
@@ -42,7 +60,7 @@
             Margin="0,10,0,0"
             HorizontalAlignment="Left"
             Background="#272537"
-            BorderBrush="Black"
+            BorderBrush="White"
             BorderThickness="0"
             Cursor="Hand"
             Click="Enter_OnClick"

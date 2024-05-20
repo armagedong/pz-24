@@ -1,0 +1,38 @@
+{
+  "Admin": [
+    {
+      "Name": "Vaca",
+      "Possitiom": "Eblan"
+    },
+    {
+      "Name": "Vaca",
+      "Possitiom": "Eblan"
+    },
+    {
+      "Name": "Vaca",
+      "Possitiom": "Eblan"
+    },
+    {
+      "Name": "Vaca",
+      "Possitiom": "Eblan"
+    }
+  ],
+  "User": [
+    {
+      "Name": "Arman",
+      "Age": "17"
+    },
+    {
+      "Name": "Ainur",
+      "Age": "18"
+    },
+    {
+      "Name": "Ainur",
+      "Age": "18"
+    },
+    {
+      "Name": "Ainur",
+      "Age": "18"
+    }
+  ]
+}

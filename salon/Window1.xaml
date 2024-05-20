@@ -52,6 +52,7 @@
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Log In"
+                             
                              Foreground="White"
                              FontFamily="Arial  Bold"
                              FontSize="25"

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:salon"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow" Height="1000" Width="1000">
+        Icon="image/icon.jpg"
+        Title="Beuty Salon" Height="1000" Width="1000">
 
     <Border Background="#272537">
         
@@ -32,18 +33,27 @@
             <StackPanel   Name="Dnts"  Grid.Row="1">
                 
                 <RadioButton Content="Домой"
+                             Click="Services_OnClick"
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Записи"
+                             Click="Appointment_OnClick"
+                             Foreground="White"
+                             FontSize="20"
+                             Style="{StaticResource menuBtn}"/>
+                <RadioButton Content="Exit"
+                             Click="ButtonBase_OnClick"
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Профессионалы"
                              Foreground="White"
-                             FontSize="20"
+                             FontSize="20" 
+                             Click="Employer_OnClick"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Контакты"
+                             Click="Contact_OnClick"
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
@@ -61,11 +71,14 @@
                              />
                 
             </StackPanel>
+            
             <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Hidden">
-                <StackPanel  Name="Content" Grid.Column="1" Grid.Row="1"
-                Margin="15" >
-                    <TextBlock FontSize="100">fuiegenioyb</TextBlock>
-                </StackPanel>
+                <Border BorderBrush="#274582" BorderThickness="5, 5,5,0">
+                    <StackPanel Name="Content" Grid.Column="1" Grid.Row="1"
+                                Margin="15" >
+                        <TextBlock FontSize="100">Content</TextBlock>
+                    </StackPanel>
+                </Border>
             </ScrollViewer>
             
         </Grid>

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "salon", "salon\salon.csproj", "{FB093B43-4AD8-402D-B070-0DC62CB55D2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serial", "Serial\Serial.csproj", "{C333B402-75F1-4200-A1EF-8466A9C0E739}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sr", "sr\sr.csproj", "{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{FB093B43-4AD8-402D-B070-0DC62CB55D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB093B43-4AD8-402D-B070-0DC62CB55D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB093B43-4AD8-402D-B070-0DC62CB55D2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C333B402-75F1-4200-A1EF-8466A9C0E739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C333B402-75F1-4200-A1EF-8466A9C0E739}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C333B402-75F1-4200-A1EF-8466A9C0E739}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C333B402-75F1-4200-A1EF-8466A9C0E739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
