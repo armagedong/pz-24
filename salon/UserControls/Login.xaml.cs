@@ -14,7 +14,7 @@ public partial class Login : UserControl
 
     private void Reg_OnClick(object sender, RoutedEventArgs e)
     {
-        RegistrtionWindow registrtionWindow = new RegistrtionWindow();
+        var registrtionWindow = new RegistrationWindow();
         registrtionWindow.Show();
     }
 
@@ -27,7 +27,7 @@ public partial class Login : UserControl
                 Window1 window1 = new Window1();
                 window1.Show();
                 var myWindow = Window.GetWindow(this);
-                myWindow.Close();
+                myWindow?.Close();
             }
             else
             {

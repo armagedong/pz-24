@@ -3,77 +3,64 @@
     {
       "Login": "123",
       "Password": "123",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "32",
       "Password": "32",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "0",
       "Password": "0",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "1",
       "Password": "1",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "admin",
       "Password": "admin",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "Арман",
       "Password": "Кантурлеев",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "asd",
       "Password": "asd",
-      "FIO": null,
       "ServicesEnt": null
     },
     {
       "Login": "zxc",
       "Password": "zxc",
-      "FIO": null,
+      "ServicesEnt": null
+    },
+    {
+      "Login": "qe",
+      "Password": "qe",
+      "ServicesEnt": null
+    },
+    {
+      "Login": "asdq",
+      "Password": "asdq",
+      "ServicesEnt": null
+    },
+    {
+      "Login": "па",
+      "Password": "па",
       "ServicesEnt": null
     }
   ],
   "Employers": [
     {
-      "Name": "Айнур",
-      "Age": "18",
-      "Possition": "Пишет код"
-    },
-    {
-      "Name": "Радмир",
-      "Age": "17",
-      "Possition": "Любит вкусно покушать"
-    },
-    {
-      "Name": "Артем",
-      "Age": "17",
-      "Possition": "Екатеринит"
-    },
-    {
-      "Name": "Вячеслав Садыков",
-      "Age": "17",
-      "Possition": "Учиться в окэи"
-    },
-    {
-      "Name": "zxc",
-      "Age": "zxc",
-      "Possition": "zxc"
+      "Name": "sdf",
+      "Age": "sdf",
+      "Possition": "sdf"
     }
   ],
   "Appointment": null,

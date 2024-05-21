@@ -23,8 +23,6 @@ namespace salon
             InitializeComponent();
         }
 
-        public object NewButton_Click { get; private set; }
-
         private void Image_SizeChanged(object sender, SizeChangedEventArgs e)
         {
 
@@ -33,9 +31,8 @@ namespace salon
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            Login login = new Login();
+            var login = new Login();
             Content.Children.Add(login);
-            Window1 window1 = new Window1();
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -46,8 +43,8 @@ namespace salon
         private void Employer_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            List<EmployerIcon> employerIcons = new List<EmployerIcon>();
-            foreach (Employers i in Serialize.ShowEmployers())
+            var employerIcons = new List<EmployerIcon>();
+            foreach (var i in Serialize.ShowEmployers())
             {
                 EmployerIcon employerIcon = new EmployerIcon();
                 employerIcon.EmployeeNameText.Text = i.Name;
@@ -65,21 +62,21 @@ namespace salon
         private void Contact_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            ContactCard contactCard = new ContactCard();
+            var contactCard = new ContactCard();
             Content.Children.Add(contactCard);
         }
 
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
 
-            Services services = new Services();
+            var services = new Services();
             Content.Children.Add(services);
             
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "", System.Windows.MessageBoxButton.YesNo);
+            var messageBoxResult = MessageBox.Show("Are you sure?", "", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Close();
@@ -89,7 +86,7 @@ namespace salon
         private void Appointment_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            Appointment appointment = new Appointment();
+            var appointment = new Appointment();
             Content.Children.Add(appointment);
         }
     }

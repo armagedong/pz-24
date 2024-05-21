@@ -42,11 +42,6 @@
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
-                <RadioButton Content="Exit"
-                             Click="ButtonBase_OnClick"
-                             Foreground="White"
-                             FontSize="20"
-                             Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Профессионалы"
                              Foreground="White"
                              FontSize="20" 
@@ -69,6 +64,11 @@
                              Style="{StaticResource menuBtn}"
                              Click="LoginButton_Click" Checked="RadioButton_Checked"
                              />
+                <RadioButton Content="Exit"
+                             Click="ButtonBase_OnClick"
+                             Foreground="White"
+                             FontSize="20"
+                             Style="{StaticResource menuBtn}"/>
                 
             </StackPanel>
             

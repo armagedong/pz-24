@@ -3,7 +3,6 @@ using System.Text.Json;
 using System.Text.Json;
 using Newtonsoft.Json;
 using System.Windows.Controls;
-using Newtonsoft.Json;
 using System.IO;
 using System.Security.Policy;
 using System.Windows;
@@ -13,6 +12,7 @@ using System.Xml;
 using Formatting = Newtonsoft.Json.Formatting;
 
 namespace salon;
+
 public static class Serialize
 {
     public static bool Save(TextBox login, PasswordBox password)
@@ -57,19 +57,25 @@ public static class Serialize
         
         string reg =  JsonConvert.SerializeObject(EmployerLog , Formatting.Indented); 
         File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
-        
     }
     public static List<Employers> ShowEmployers()
     {
-        Entity EmployerLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
+        var EmployerLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
 
-        List<Employers> employersList = new List<Employers>();
+        var employersList = new List<Employers>();
 
-        foreach (Employers i in EmployerLog.Employers)
+        foreach (var i in EmployerLog.Employers)
         {
             employersList.Add(i);
         }
-
         return employersList;
+    }
+    public static void RemoveEmployers(int i)
+    {
+        Entity EmployerLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
+        EmployerLog.Employers.Remove(EmployerLog.Employers[i]);
+        
+        string reg =  JsonConvert.SerializeObject(EmployerLog , Formatting.Indented); 
+        File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
     }
 }

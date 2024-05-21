@@ -5,8 +5,57 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:salon"
         mc:Ignorable="d"
-        Title="AdminPanel" Height="450" Width="800">
-    <Border>
-        <Button Click="AddEmployer_OnClick"> Добавить услугу</Button>
+        Title="AdminPanel" Height="1000" Width="1000">
+    <Border Background="#272537">
+        
+        <Grid>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Beuty Salon" 
+                       FontFamily="Arial Bold"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="15"
+                       Foreground="White"
+                       FontSize="22"/>
+            <StackPanel   Name="Btns"  Grid.Row="1">
+                <RadioButton Content="Услуги"
+                             Foreground="White"
+                             FontSize="20"
+                             Style="{StaticResource menuBtn}"/>
+                <RadioButton Content="Профессионалы"
+                             Click="RedactEmployer"
+                             Foreground="White"
+                             FontSize="20" 
+                             Style="{StaticResource menuBtn}"/>
+                <RadioButton Content="Контакты"
+                             Foreground="White"
+                             FontSize="20"
+                             Style="{StaticResource menuBtn}"/>
+                <RadioButton Content="Exit"
+                             Foreground="White"
+                             FontSize="20"
+                             Style="{StaticResource menuBtn}"/>
+                
+            </StackPanel>
+            
+            <ScrollViewer Grid.Column="1" Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                <Border BorderBrush="#274582" BorderThickness="5, 5,5,0">
+                    <StackPanel Name="Content" Grid.Column="1" Grid.Row="1"
+                                Margin="15" >
+                        
+                    </StackPanel>
+                </Border>
+            </ScrollViewer>
+        </Grid>
     </Border>
 </Window>

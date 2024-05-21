@@ -2,12 +2,10 @@
 
 namespace salon;
 
-public partial class RegistrtionWindow : Window
+public partial class RegistrationWindow : Window
 {
-    
-
-    public RegistrtionWindow()
-    {
+    public RegistrationWindow()
+    {   
         InitializeComponent();
     }
 
@@ -15,6 +13,7 @@ public partial class RegistrtionWindow : Window
     {
         if (Check.IsChecked == true && Log_in.Text != "" && Password.Password != "" && PasswordCheck.Password != "")
         {
+            
             Serialize.Registration(Log_in, Password);
             Close();
         }
