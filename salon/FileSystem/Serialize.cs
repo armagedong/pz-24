@@ -15,15 +15,18 @@ namespace salon;
 
 public static class Serialize
 {
-    public static bool Save(TextBox login, PasswordBox password)
+    public static void Save(TextBox login, PasswordBox password)
     {
-        bool check = false;
+        
         Entity UserLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
         foreach (UserReg user in UserLog.Users)
         {
             if (login.Text == user.Login && password.Password == user.Password)
             {
-                check = true;
+                Window1 window1 = new Window1();
+                window1.Show();
+                window1.YouAcc.Content = user.FIO;
+                break;
             }
             else if(login.Text == "admin" && password.Password == "admin")
             {
@@ -33,10 +36,9 @@ public static class Serialize
             }
         }
 
-        return check;
     }
 
-    public static void Registration(TextBox login, PasswordBox password)
+    public static void Registration(TextBox login, PasswordBox password , TextBox fio)
     { 
 
         
@@ -44,7 +46,7 @@ public static class Serialize
         
         if (login.Text != "admin" && password.Password != "admin")
         {
-            UserLog.Users.Add(new UserReg(login.Text, password.Password));
+            UserLog.Users.Add(new UserReg(login.Text, password.Password, fio.Text));
             string reg =  JsonConvert.SerializeObject(UserLog , Formatting.Indented);
             File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
         }
@@ -70,12 +72,44 @@ public static class Serialize
         }
         return employersList;
     }
+    public static List<ServicesEnt> ShowService()
+    {
+        var serviceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
+
+        var serviceList = new List<ServicesEnt>();
+
+        foreach (var i in serviceLog._Services)
+        {
+            serviceList.Add(i);
+        }
+        return serviceList;
+    }
     public static void RemoveEmployers(int i)
     {
         Entity EmployerLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
         EmployerLog.Employers.Remove(EmployerLog.Employers[i]);
         
         string reg =  JsonConvert.SerializeObject(EmployerLog , Formatting.Indented); 
+        File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
+    }
+    public static void RemoveService(int i)
+    {
+        Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
+        File.Delete(ServiceLog._Services[i].Img);
+        ServiceLog._Services.Remove(ServiceLog._Services[i]);
+
+        
+        
+        string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented); 
+        File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
+    }
+
+    public static void AddService(string img, string name, string cost, string duration, string description)
+    {
+        Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json"));
+        ServiceLog._Services.Add(new ServicesEnt(img, name, cost, duration,description));
+        
+        string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented); 
         File.WriteAllText(@"C:\Users\arman\source\repos\salon\salon\FileSystem\Ser.json", reg);
     }
 }

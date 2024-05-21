@@ -29,6 +29,7 @@
                        FontSize="22"/>
             <StackPanel   Name="Btns"  Grid.Row="1">
                 <RadioButton Content="Услуги"
+                             Click="RedactService"
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
@@ -42,6 +43,7 @@
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Exit"
+                             Click="ButtonBase_OnClick"
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>

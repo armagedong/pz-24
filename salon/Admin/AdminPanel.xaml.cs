@@ -28,5 +28,24 @@ public partial class AdminPanel : Window
     {
         
     }
-    
+
+    private void RedactService(object sender, RoutedEventArgs e)
+    {
+        
+        Content.Children.Clear();
+        var addServiceWindow = new RedSerControll();
+        Content.Children.Add(addServiceWindow);
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    {
+        var messageBoxResult = MessageBox.Show("Are you sure?", "", System.Windows.MessageBoxButton.YesNo);
+        if (messageBoxResult == MessageBoxResult.Yes)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
+                
+        }
+    }
 }

@@ -22,17 +22,10 @@ public partial class Login : UserControl
     {
         if (LogIn.Text != "" && Password.Password != "")
         {
-            if (Serialize.Save(LogIn, Password))
-            {
-                Window1 window1 = new Window1();
-                window1.Show();
-                var myWindow = Window.GetWindow(this);
-                myWindow?.Close();
-            }
-            else
-            {
-                MessageBox.Show("Такого пользователя не существует");
-            }
+            Serialize.Save(LogIn, Password);
+            var myWindow = Window.GetWindow(this);
+            myWindow?.Close();
+            
         }
         else
         {

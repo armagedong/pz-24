@@ -4,12 +4,13 @@ public class UserReg
 {
     public string Login { get; set; }
     public string Password { get; set; }
-    //public string FIO { get; set; }
-    public List<ServicesEnt> ServicesEnt { get; set; }
+    public string FIO { get; set; }
+    //public List<ServicesEnt> ServicesEnt { get; set; }
 
-    public UserReg(string login, string password)
+    public UserReg(string login, string password, string fio)
     {
         Login = login;
         Password = password;
+        FIO = fio;
     }
 }

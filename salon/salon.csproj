@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="image\im1.png" />
     <Resource Include="image\orig.jpg" />
     <None Remove="image\icon.jpg" />
     <Resource Include="image\icon.jpg" />
@@ -50,7 +49,7 @@
       <XamlRuntime>Wpf</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserControls\Services.xaml">
+    <Page Update="UserControls\Servic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <XamlRuntime>Wpf</XamlRuntime>
       <SubType>Designer</SubType>

@@ -14,7 +14,7 @@ public partial class RegistrationWindow : Window
         if (Check.IsChecked == true && Log_in.Text != "" && Password.Password != "" && PasswordCheck.Password != "")
         {
             
-            Serialize.Registration(Log_in, Password);
+            Serialize.Registration(Log_in, Password, FIO);
             Close();
         }
         else

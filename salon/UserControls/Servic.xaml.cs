@@ -2,9 +2,9 @@
 
 namespace salon;
 
-public partial class Services : UserControl
+public partial class Servic : UserControl
 {
-    public Services()
+    public Servic()
     {
         InitializeComponent();
     }

@@ -3,57 +3,57 @@
     {
       "Login": "123",
       "Password": "123",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "32",
       "Password": "32",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "0",
       "Password": "0",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "1",
       "Password": "1",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "admin",
       "Password": "admin",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "Арман",
       "Password": "Кантурлеев",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "asd",
       "Password": "asd",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "zxc",
       "Password": "zxc",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "qe",
       "Password": "qe",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "asdq",
       "Password": "asdq",
-      "ServicesEnt": null
+      "FIO": null
     },
     {
       "Login": "па",
       "Password": "па",
-      "ServicesEnt": null
+      "FIO": null
     }
   ],
   "Employers": [
@@ -61,8 +61,86 @@
       "Name": "sdf",
       "Age": "sdf",
       "Possition": "sdf"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
+    },
+    {
+      "Name": "asd",
+      "Age": "asd",
+      "Possition": "asd"
     }
   ],
   "Appointment": null,
-  "Services": null
+  "_Services": [
+    {
+      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\im1.png",
+      "Name": "asd",
+      "Cost": "asd",
+      "Duration": "asd",
+      "Description": "asd"
+    }
+  ]
 }

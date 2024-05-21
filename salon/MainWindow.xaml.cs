@@ -21,6 +21,7 @@ namespace salon
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void Image_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -68,8 +69,8 @@ namespace salon
 
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
-
-            var services = new Services();
+            Content.Children.Clear();
+            var services = new Servic();
             Content.Children.Add(services);
             
         }
