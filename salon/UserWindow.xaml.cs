@@ -19,9 +19,11 @@ namespace salon
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class UserWindow : Window
     {
-        public Window1()
+        List<Appointment> UserservicsIcons = new List<Appointment>();
+        List<Servic> servicsIcons = new List<Servic>();
+        public UserWindow()
         {
             InitializeComponent();
         }
@@ -46,6 +48,7 @@ namespace salon
         private void Employer_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
+            
             var employerIcons = new List<EmployerIcon>();
             foreach (var i in Serialize.ShowEmployers())
             {
@@ -72,7 +75,6 @@ namespace salon
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            var servicsIcons = new List<Servic>();
             foreach (var i in Serialize.ShowService())
             {
                 BitmapImage src = new BitmapImage();
@@ -84,7 +86,6 @@ namespace salon
                 employerIcon.ServiceImage.Source = src;
                 employerIcon.ServiceNameText.Text = i.Name;
                 employerIcon.ServicePriceText.Text = i.Cost;
-                employerIcon.ServiceDurationText.Text = i.Duration;
                 employerIcon.ServiceDescriptionText.Text = i.Description;
                 
                 servicsIcons.Add(employerIcon);
@@ -104,6 +105,8 @@ namespace salon
             var messageBoxResult = MessageBox.Show("Are you sure?", "", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
+                Serialize.Count = 0;
+                servicsIcons.Clear();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 Close();
@@ -114,8 +117,28 @@ namespace salon
         private void Appointment_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            var appointment = new Appointment();
-            Content.Children.Add(appointment);
+            UserservicsIcons.Clear();
+            foreach (var i in Serialize.ShowUserRecords())
+            {
+                BitmapImage src = new BitmapImage();
+                src.BeginInit();
+                src.UriSource = new Uri(i.Img, UriKind.Relative);
+                src.CacheOption = BitmapCacheOption.OnLoad;
+                src.EndInit();
+                Appointment AppIcon = new Appointment();
+                AppIcon.AppointmentImage.Source = src;
+                AppIcon.AppointmentNameText.Text = i.Name;
+                AppIcon.AppointmentPriceText.Text = i.Cost;
+                AppIcon.AppointmentDurationText.Text = i.Duration;
+                AppIcon.AppointmentTimeText.Text = i.Time;
+                
+                UserservicsIcons.Add(AppIcon);
+            }
+            
+            foreach (Appointment i in UserservicsIcons)
+            {
+                Content.Children.Add(i);
+            }
         }
     }
 }

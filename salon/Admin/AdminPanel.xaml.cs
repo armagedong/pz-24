@@ -42,6 +42,7 @@ public partial class AdminPanel : Window
         var messageBoxResult = MessageBox.Show("Are you sure?", "", System.Windows.MessageBoxButton.YesNo);
         if (messageBoxResult == MessageBoxResult.Yes)
         {
+            Serialize.Count = 0;
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Close();

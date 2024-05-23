@@ -1,146 +1,96 @@
 {
   "Users": [
     {
-      "Login": "123",
-      "Password": "123",
-      "FIO": null
-    },
-    {
-      "Login": "32",
-      "Password": "32",
-      "FIO": null
-    },
-    {
-      "Login": "0",
-      "Password": "0",
-      "FIO": null
+      "Login": "admin",
+      "Password": "admin",
+      "FIO": null,
+      "RecordServices": []
     },
     {
       "Login": "1",
       "Password": "1",
-      "FIO": null
+      "FIO": "1",
+      "RecordServices": [
+        {
+          "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-05-21 215323.png",
+          "Name": "фв",
+          "Cost": "фв",
+          "Duration": "10 часов",
+          "Description": "фв",
+          "Time": "1"
+        },
+        {
+          "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-05-20 162135.png",
+          "Name": "фв",
+          "Cost": "фв",
+          "Duration": "10 часов",
+          "Description": "фв",
+          "Time": "2"
+        },
+        {
+          "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-05-20 162135.png",
+          "Name": "фв",
+          "Cost": "фв",
+          "Duration": "10 часов",
+          "Description": "фв",
+          "Time": "3"
+        },
+        {
+          "Img": "C:/Users/arman/source/repos/salon/salon/image/Снимок экрана 2024-05-21 215323.png",
+          "Name": "фв",
+          "Cost": "фв",
+          "Duration": "10 часов",
+          "Description": "фв",
+          "Time": "1"
+        }
+      ]
     },
     {
-      "Login": "admin",
-      "Password": "admin",
-      "FIO": null
-    },
-    {
-      "Login": "Арман",
-      "Password": "Кантурлеев",
-      "FIO": null
-    },
-    {
-      "Login": "asd",
-      "Password": "asd",
-      "FIO": null
-    },
-    {
-      "Login": "zxc",
-      "Password": "zxc",
-      "FIO": null
-    },
-    {
-      "Login": "qe",
-      "Password": "qe",
-      "FIO": null
-    },
-    {
-      "Login": "asdq",
-      "Password": "asdq",
-      "FIO": null
-    },
-    {
-      "Login": "па",
-      "Password": "па",
-      "FIO": null
+      "Login": "2",
+      "Password": "2",
+      "FIO": "2",
+      "RecordServices": []
     }
   ],
   "Employers": [
     {
-      "Name": "sdf",
-      "Age": "sdf",
-      "Possition": "sdf"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
-    },
-    {
-      "Name": "asd",
-      "Age": "asd",
-      "Possition": "asd"
+      "Name": "ad",
+      "Age": "ad",
+      "Possition": "ad"
     }
   ],
-  "Appointment": null,
   "_Services": [
     {
-      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\im1.png",
-      "Name": "asd",
-      "Cost": "asd",
-      "Duration": "asd",
-      "Description": "asd"
+      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-05-21 215323.png",
+      "Name": "фв",
+      "Cost": "фв",
+      "Duration": "фв",
+      "Description": "фв",
+      "Time": null
+    },
+    {
+      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-05-20 162135.png",
+      "Name": "фв",
+      "Cost": "фв",
+      "Duration": "фв",
+      "Description": "фв",
+      "Time": null
+    },
+    {
+      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-04-27 021909.png",
+      "Name": "йцу",
+      "Cost": "йцу",
+      "Duration": "йцу",
+      "Description": "йцу",
+      "Time": null
+    },
+    {
+      "Img": "C:\\Users\\arman\\source\\repos\\salon\\salon\\image\\Снимок экрана 2024-04-27 020624.png",
+      "Name": "ывфыва",
+      "Cost": "фыва",
+      "Duration": "фыва",
+      "Description": "йцуфыва",
+      "Time": null
     }
   ]
 }

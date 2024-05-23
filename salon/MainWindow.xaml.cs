@@ -70,7 +70,8 @@ namespace salon
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            var services = new Servic();
+            var services = new Appointment();
+            services.AppointmentTimeText.Text = "";
             Content.Children.Add(services);
             
         }

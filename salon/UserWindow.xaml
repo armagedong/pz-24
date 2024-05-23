@@ -1,4 +1,4 @@
-﻿<Window x:Class="salon.Window1"
+﻿<Window x:Class="salon.UserWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -55,18 +55,11 @@
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
-                <RadioButton Content="Log In"
-                             Foreground="White"
-                             FontFamily="Arial  Bold"
-                             FontSize="25"
-                             VerticalAlignment="Bottom"
-                             Style="{StaticResource menuBtn}"
-                             Click="LoginButton_Click" Checked="RadioButton_Checked"
-                />
                 <RadioButton Content="Exit"
                              Click="ButtonBase_OnClick"
                              Foreground="White"
-                             FontSize="20"
+                             FontSize="30"
+                             FontFamily="Arial BOld"
                              Style="{StaticResource menuBtn}"/>
                 
             </StackPanel>

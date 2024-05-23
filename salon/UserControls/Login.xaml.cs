@@ -22,7 +22,17 @@ public partial class Login : UserControl
     {
         if (LogIn.Text != "" && Password.Password != "")
         {
-            Serialize.Save(LogIn, Password);
+            if (Serialize.Save(LogIn, Password) == 1)
+            {
+                UserWindow userWindow = new UserWindow();
+                userWindow.YouAcc.Content = Serialize.FIO;
+                userWindow.Show();
+            }
+            else if (Serialize.Save(LogIn, Password) == 2)
+            {
+                AdminPanel adminPanel = new AdminPanel();
+                adminPanel.Show();
+            }
             var myWindow = Window.GetWindow(this);
             myWindow?.Close();
             

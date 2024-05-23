@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "salon", "salon\salon.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sr", "sr\sr.csproj", "{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalonLibraryFileSystem", "SalonLibraryFileSystem\SalonLibraryFileSystem.csproj", "{F79F8EDC-019C-4B87-A319-2D5DA0070980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B71C91AF-AC9C-4E94-B6B7-7F76F6B6340C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79F8EDC-019C-4B87-A319-2D5DA0070980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79F8EDC-019C-4B87-A319-2D5DA0070980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79F8EDC-019C-4B87-A319-2D5DA0070980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79F8EDC-019C-4B87-A319-2D5DA0070980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

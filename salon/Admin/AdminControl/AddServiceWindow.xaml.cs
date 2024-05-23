@@ -10,7 +10,7 @@ public partial class AddServiceWindow : Window
     static OpenFileDialog openFileDialog = new OpenFileDialog();
     private string onlyFileName;
     public string newLocation;
-    
+    public event EventHandler<List<ServicesEnt>> ItemAdded;
     public AddServiceWindow()
     {
         InitializeComponent();
@@ -35,9 +35,10 @@ public partial class AddServiceWindow : Window
     private void AddService(object sender, RoutedEventArgs e)
     {
         Serialize.AddService(newLocation, name.Text, сost.Text, duration.Text, description.Text);
-        if (newLocation != "")
+        if (newLocation != null)
         {
             Add();
         }
+        ItemAdded?.Invoke(this,  Serialize.ShowService());
     }
 }

@@ -37,11 +37,6 @@
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
-                <RadioButton Content="Записи"
-                             Click="Appointment_OnClick"
-                             Foreground="White"
-                             FontSize="20"
-                             Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Профессионалы"
                              Foreground="White"
                              FontSize="20" 

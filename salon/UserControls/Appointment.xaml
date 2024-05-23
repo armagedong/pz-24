@@ -12,11 +12,11 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Name="ServiceImage" Width="100" Height="100" Margin="10" VerticalAlignment="Center" Source="https://via.placeholder.com/100"/>
+            <Image Name="AppointmentImage" Width="100" Height="100" Margin="10" VerticalAlignment="Center" Source="https://via.placeholder.com/100"/>
             <StackPanel Grid.Column="1" Margin="10">
-                <TextBlock Name="ServiceNameText" FontSize="20" FontWeight="Bold" Foreground="#ECF0F1" Text="Название Услуги"/>
-                <TextBlock Name="ServicePriceText" FontSize="16" Foreground="#BDC3C7" Text="Цена: 1000 руб"/>
-                <TextBlock Name="ServiceDurationText" FontSize="14" Foreground="#95A5A6" Margin="0,10,0,0" Text="Длительность: 1 час"/>
+                <TextBlock Name="AppointmentNameText" FontSize="20" FontWeight="Bold" Foreground="#ECF0F1" Text="Название Услуги"/>
+                <TextBlock Name="AppointmentPriceText" FontSize="16" Foreground="#BDC3C7" Text="Цена: 1000 руб"/>
+                <TextBlock Name="AppointmentDurationText" FontSize="14" Foreground="#95A5A6" Margin="0,10,0,0" Text="Длительность: 1 час"/>
                 <TextBlock Name="AppointmentTimeText" FontSize="14" Foreground="#95A5A6" Margin="0,10,0,0" Text="Время записи: 14:00"/>
             </StackPanel>
         </Grid>

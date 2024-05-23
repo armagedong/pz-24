@@ -16,7 +16,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid Grid.ColumnSpan="2" Grid.Row="0" Name="EmployerDataGrid">
+        <DataGrid Grid.ColumnSpan="2" Grid.Row="0" Name="EmployerDataGrid" IsReadOnly="True">
         </DataGrid>
         <Button Click="AddEmploer" Height="30" Grid.Column="0" Grid.Row="3"  Name="Add">Добавить</Button>
         <Button Click="Remove_OnClick" Height="30" Grid.Column="1" Grid.Row="3"  Name="Redact">Удалить</Button>

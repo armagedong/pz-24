@@ -7,6 +7,8 @@ public class ServicesEnt
     public string Cost { get; set; }
     public string Duration { get; set; }
     public string Description { get; set; }
+    
+    public string Time { get; set; }
 
     public ServicesEnt(string img, string name, string cost, string duration, string description)
     {
@@ -16,4 +18,5 @@ public class ServicesEnt
         Duration = duration;
         Description = description;
     }
+    
 }

@@ -7,6 +7,7 @@ namespace salon.Admin.AdminControl;
 
 public partial class RedSerControll : UserControl
 {
+    public event EventHandler<List<ServicesEnt>> ItemAdded;
     public RedSerControll()
     {
         InitializeComponent();
@@ -18,7 +19,13 @@ public partial class RedSerControll : UserControl
     {
         
         AddServiceWindow addServiceWindow = new AddServiceWindow();
+        addServiceWindow.ItemAdded += OnItemAdded;
         addServiceWindow.Show();
+    }
+    private void OnItemAdded(object sender, List<ServicesEnt> newItem)
+    {
+        var employers = newItem;
+        ServiceDataGrid.ItemsSource = employers;
     }
 
     private void Redact_OnClick(object sender, RoutedEventArgs e)
