@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:salon"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Icon="image/icon.jpg"
         Title="Beuty Salon" Height="1000" Width="1000">
 
     <Border Background="#272537">

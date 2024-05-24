@@ -9,7 +9,7 @@ public partial class AddServiceWindow : Window
 {
     static OpenFileDialog openFileDialog = new OpenFileDialog();
     private string onlyFileName;
-    public string newLocation;
+    public byte[] newLocation;
     public event EventHandler<List<ServicesEnt>> ItemAdded;
     public AddServiceWindow()
     {
@@ -18,27 +18,24 @@ public partial class AddServiceWindow : Window
 
     private void AddImg_OnClick(object sender, RoutedEventArgs e)
     {
+       
+        OpenFileDialog openFileDialog = new OpenFileDialog();
         openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+        
+        
         if (openFileDialog.ShowDialog() == true)
         {
-            onlyFileName = System.IO.Path.GetFileName(openFileDialog.FileName);
-            newLocation = @"C:\Users\arman\source\repos\salon\salon\image" + "\\" + onlyFileName; 
+            string selectedImagePath = openFileDialog.FileName;
+            newLocation = File.ReadAllBytes(selectedImagePath);
             
         }
     }
 
-    public void  Add()
-    {
-        File.Copy( openFileDialog.FileName, newLocation, true);
-    }
+   
 
     private void AddService(object sender, RoutedEventArgs e)
     {
         Serialize.AddService(newLocation, name.Text, сost.Text, duration.Text, description.Text);
-        if (newLocation != null)
-        {
-            Add();
-        }
-        ItemAdded?.Invoke(this,  Serialize.ShowService());
+        
     }
 }

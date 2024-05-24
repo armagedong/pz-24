@@ -2,7 +2,7 @@
 
 public class ServicesEnt
 {
-    public string Img { get; set; }
+    public byte[] Img { get; set; }
     public string Name { get; set; }
     public string Cost { get; set; }
     public string Duration { get; set; }
@@ -10,7 +10,7 @@ public class ServicesEnt
     
     public string Time { get; set; }
 
-    public ServicesEnt(string img, string name, string cost, string duration, string description)
+    public ServicesEnt(byte[] img, string name, string cost, string duration, string description)
     {
         Img = img;
         Name = name;

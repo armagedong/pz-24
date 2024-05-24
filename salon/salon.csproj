@@ -14,9 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="image\orig.jpg" />
     <None Remove="image\icon.jpg" />
-    <Resource Include="image\icon.jpg" />
   </ItemGroup>
 
   <ItemGroup>

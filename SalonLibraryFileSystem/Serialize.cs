@@ -70,10 +70,10 @@ public static class Serialize
         }
     }
 
-    public static void RegEmployers(TextBox name, TextBox age, TextBox possition)
+    public static void RegEmployers(TextBox name, TextBox age, TextBox possition, byte[] img)
     {
         Entity EmployerLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
-        EmployerLog.Employers.Add( new Employers(name.Text, age.Text, possition.Text));
+        EmployerLog.Employers.Add( new Employers(name.Text, age.Text, possition.Text, img));
         
         string reg =  JsonConvert.SerializeObject(EmployerLog , Formatting.Indented); 
         File.WriteAllText(path, reg);
@@ -126,16 +126,15 @@ public static class Serialize
     public static void RemoveService(int i)
     {
         Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
-        File.Delete(ServiceLog._Services[i].Img);
         ServiceLog._Services.Remove(ServiceLog._Services[i]);
 
         
         
-        string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented); 
+        string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented);
         File.WriteAllText(path, reg);
     }
 
-    public static void AddService(string img, string name, string cost, string duration, string description)
+    public static void AddService(byte[] img, string name, string cost, string duration, string description)
     {
         Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
         ServiceLog._Services.Add(new ServicesEnt(img, name, cost, duration,description));
@@ -144,7 +143,7 @@ public static class Serialize
         File.WriteAllText(path, reg);
     }
 
-    public static void UserAddService(string img, string name, string cost, string duration, string description, string time)
+    public static void UserAddService(byte[] img, string name, string cost, string duration, string description, string time)
     {
         Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
         ServicesEnt servicesEnt = new ServicesEnt( img,  name,  cost,  duration,  description);

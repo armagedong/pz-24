@@ -21,7 +21,10 @@ namespace salon
         public MainWindow()
         {
             InitializeComponent();
-            
+            Content.Children.Clear();
+            var services = new Appointment();
+            services.AppointmentTimeText.Text = "";
+            Content.Children.Add(services);
         }
 
         private void Image_SizeChanged(object sender, SizeChangedEventArgs e)

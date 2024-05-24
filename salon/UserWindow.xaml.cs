@@ -22,7 +22,6 @@ namespace salon
     public partial class UserWindow : Window
     {
         List<Appointment> UserservicsIcons = new List<Appointment>();
-        List<Servic> servicsIcons = new List<Servic>();
         public UserWindow()
         {
             InitializeComponent();
@@ -52,7 +51,14 @@ namespace salon
             var employerIcons = new List<EmployerIcon>();
             foreach (var i in Serialize.ShowEmployers())
             {
+                byte[] decodedBytes = i.Img;
+                // Создание изображения из массива байтов
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = new MemoryStream(decodedBytes);
+                bitmapImage.EndInit();
                 EmployerIcon employerIcon = new EmployerIcon();
+                employerIcon.EmployeePhoto.Source = bitmapImage;
                 employerIcon.EmployeeNameText.Text = i.Name;
                 employerIcon.EmployeeAgeText.Text = i.Age;
                 employerIcon.EmployeePositionText.Text = i.Possition;
@@ -75,15 +81,18 @@ namespace salon
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
+            List<Servic> servicsIcons = new List<Servic>();
+
             foreach (var i in Serialize.ShowService())
             {
-                BitmapImage src = new BitmapImage();
-                src.BeginInit();
-                src.UriSource = new Uri(i.Img, UriKind.Relative);
-                src.CacheOption = BitmapCacheOption.OnLoad;
-                src.EndInit();
+                byte[] decodedBytes = i.Img;
+                // Создание изображения из массива байтов
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = new MemoryStream(decodedBytes);
+                bitmapImage.EndInit();
                 Servic employerIcon = new Servic();
-                employerIcon.ServiceImage.Source = src;
+                employerIcon.ServiceImage.Source = bitmapImage;
                 employerIcon.ServiceNameText.Text = i.Name;
                 employerIcon.ServicePriceText.Text = i.Cost;
                 employerIcon.ServiceDescriptionText.Text = i.Description;
@@ -106,7 +115,6 @@ namespace salon
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Serialize.Count = 0;
-                servicsIcons.Clear();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 Close();
@@ -120,13 +128,14 @@ namespace salon
             UserservicsIcons.Clear();
             foreach (var i in Serialize.ShowUserRecords())
             {
-                BitmapImage src = new BitmapImage();
-                src.BeginInit();
-                src.UriSource = new Uri(i.Img, UriKind.Relative);
-                src.CacheOption = BitmapCacheOption.OnLoad;
-                src.EndInit();
+                byte[] decodedBytes = i.Img;
+                // Создание изображения из массива байтов
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = new MemoryStream(decodedBytes);
+                bitmapImage.EndInit();
                 Appointment AppIcon = new Appointment();
-                AppIcon.AppointmentImage.Source = src;
+                AppIcon.AppointmentImage.Source = bitmapImage;
                 AppIcon.AppointmentNameText.Text = i.Name;
                 AppIcon.AppointmentPriceText.Text = i.Cost;
                 AppIcon.AppointmentDurationText.Text = i.Duration;

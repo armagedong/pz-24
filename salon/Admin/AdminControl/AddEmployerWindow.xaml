@@ -12,10 +12,13 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+
         </Grid.RowDefinitions>
         <TextBox Name="name" ></TextBox>
         <TextBox Grid.Row="1" Name="age"></TextBox>
         <TextBox Grid.Row="2" Name="possition"></TextBox>
-        <Button Click="Add_OnClick" Grid.Row="3">Добавить</Button>
+        <Button Click="AddImg_OnClick" Grid.Row="3">Добавить Иконку</Button>
+        <Button Click="Add_OnClick" Grid.Row="4">Добавить</Button>
     </Grid>
 </Window>
