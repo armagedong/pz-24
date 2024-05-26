@@ -27,14 +27,20 @@ public partial class Login : UserControl
                 UserWindow userWindow = new UserWindow();
                 userWindow.YouAcc.Content = Serialize.FIO;
                 userWindow.Show();
+                var myWindow = Window.GetWindow(this);
+                myWindow?.Close();
             }
             else if (Serialize.Save(LogIn, Password) == 2)
             {
                 AdminPanel adminPanel = new AdminPanel();
                 adminPanel.Show();
+                var myWindow = Window.GetWindow(this);
+                myWindow?.Close();
             }
-            var myWindow = Window.GetWindow(this);
-            myWindow?.Close();
+            else
+            {
+                MessageBox.Show("Непрвавльно введен пароль или логин");
+            }
             
         }
         else

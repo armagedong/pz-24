@@ -38,9 +38,11 @@
                              Foreground="White"
                              FontSize="20" 
                              Style="{StaticResource menuBtn}"/>
-                <RadioButton Content="Контакты"
+                <RadioButton Content="Заказанные услуги"
+                             Click="ComboUsersServices_OnClick"
                              Foreground="White"
-                             FontSize="20"
+                             FontSize="18" 
+                             Name="ComboUsersServices"
                              Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Exit"
                              Click="ButtonBase_OnClick"
@@ -54,7 +56,6 @@
                 <Border BorderBrush="#274582" BorderThickness="5, 5,5,0">
                     <StackPanel Name="Content" Grid.Column="1" Grid.Row="1"
                                 Margin="15" >
-                        
                     </StackPanel>
                 </Border>
             </ScrollViewer>

@@ -22,6 +22,7 @@ namespace salon
     public partial class UserWindow : Window
     {
         List<Appointment> UserservicsIcons = new List<Appointment>();
+
         public UserWindow()
         {
             InitializeComponent();

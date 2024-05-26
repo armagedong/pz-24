@@ -27,7 +27,6 @@ public partial class AddServiceWindow : Window
         {
             string selectedImagePath = openFileDialog.FileName;
             newLocation = File.ReadAllBytes(selectedImagePath);
-            
         }
     }
 
@@ -36,6 +35,7 @@ public partial class AddServiceWindow : Window
     private void AddService(object sender, RoutedEventArgs e)
     {
         Serialize.AddService(newLocation, name.Text, сost.Text, duration.Text, description.Text);
+        ItemAdded?.Invoke(this,  Serialize.ShowService());
         
     }
 }

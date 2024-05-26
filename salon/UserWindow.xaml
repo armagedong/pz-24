@@ -51,10 +51,6 @@
                              Foreground="White"
                              FontSize="20"
                              Style="{StaticResource menuBtn}"/>
-                <RadioButton Content="Отзывы"
-                             Foreground="White"
-                             FontSize="20"
-                             Style="{StaticResource menuBtn}"/>
                 <RadioButton Content="Exit"
                              Click="ButtonBase_OnClick"
                              Foreground="White"

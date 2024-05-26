@@ -102,6 +102,11 @@ public static class Serialize
         }
         return serviceList;
     }
+    public static List<UserReg> ShowUser()
+    {
+        var showLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
+        return showLog.Users;
+    }
     
     public static List<ServicesEnt> ShowUserRecords()
     {
@@ -133,6 +138,16 @@ public static class Serialize
         string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented);
         File.WriteAllText(path, reg);
     }
+    public static void completeServiceUser(int i, int j)
+    {
+        Entity ServiceLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
+        ServiceLog.Users[i].RecordServices[j].complete = true;
+
+        
+        
+        string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented);
+        File.WriteAllText(path, reg);
+    }
 
     public static void AddService(byte[] img, string name, string cost, string duration, string description)
     {
@@ -153,4 +168,5 @@ public static class Serialize
         string reg =  JsonConvert.SerializeObject(ServiceLog , Formatting.Indented);
         File.WriteAllText(path, reg);
     }
+    
 }

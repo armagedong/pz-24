@@ -24,10 +24,6 @@ public partial class AdminPanel : Window
         var employer = new RedEmploerControl();
         Content.Children.Add(employer);
     }
-    private void RemoveEmployer_OnClick(object sender, RoutedEventArgs e)
-    {
-        
-    }
 
     private void RedactService(object sender, RoutedEventArgs e)
     {
@@ -48,5 +44,12 @@ public partial class AdminPanel : Window
             Close();
                 
         }
+    }
+
+    private void ComboUsersServices_OnClick(object sender, RoutedEventArgs e)
+    {
+        Content.Children.Clear();
+        ServisecCombo servisecCombo = new ServisecCombo();
+        Content.Children.Add(servisecCombo);
     }
 }
