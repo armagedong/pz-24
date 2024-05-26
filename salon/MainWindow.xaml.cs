@@ -1,4 +1,5 @@
-﻿using System.Net.Sockets;
+﻿using System.IO;
+using System.Net.Sockets;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -18,6 +19,7 @@ namespace salon
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Appointment> UserservicsIcons = new List<Appointment>();
         public MainWindow()
         {
             InitializeComponent();
@@ -47,10 +49,18 @@ namespace salon
         private void Employer_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
+            
             var employerIcons = new List<EmployerIcon>();
             foreach (var i in Serialize.ShowEmployers())
             {
+                byte[] decodedBytes = i.Img;
+                // Создание изображения из массива байтов
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = new MemoryStream(decodedBytes);
+                bitmapImage.EndInit();
                 EmployerIcon employerIcon = new EmployerIcon();
+                employerIcon.EmployeePhoto.Source = bitmapImage;
                 employerIcon.EmployeeNameText.Text = i.Name;
                 employerIcon.EmployeeAgeText.Text = i.Age;
                 employerIcon.EmployeePositionText.Text = i.Possition;
@@ -73,9 +83,29 @@ namespace salon
         private void Services_OnClick(object sender, RoutedEventArgs e)
         {
             Content.Children.Clear();
-            var services = new Appointment();
-            services.AppointmentTimeText.Text = "";
-            Content.Children.Add(services);
+            UserservicsIcons.Clear();
+            foreach (var i in Serialize.ShowService())
+            {
+                byte[] decodedBytes = i.Img;
+                // Создание изображения из массива байтов
+                BitmapImage bitmapImage = new BitmapImage();
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = new MemoryStream(decodedBytes);
+                bitmapImage.EndInit();
+                Appointment AppIcon = new Appointment();
+                AppIcon.AppointmentImage.Source = bitmapImage;
+                AppIcon.AppointmentNameText.Text = i.Name;
+                AppIcon.AppointmentPriceText.Text = i.Cost;
+                AppIcon.AppointmentDurationText.Text = i.Duration;
+                AppIcon.AppointmentTimeText.Text = "";
+                
+                UserservicsIcons.Add(AppIcon);
+            }
+            
+            foreach (Appointment i in UserservicsIcons)
+            {
+                Content.Children.Add(i);
+            }
             
         }
 
@@ -87,12 +117,6 @@ namespace salon
                 Close();
             }
         }
-
-        private void Appointment_OnClick(object sender, RoutedEventArgs e)
-        {
-            Content.Children.Clear();
-            var appointment = new Appointment();
-            Content.Children.Add(appointment);
-        }
+        
     }
 }

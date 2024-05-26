@@ -33,7 +33,7 @@ public static class Serialize
         Entity UserLog = JsonConvert.DeserializeObject<Entity>(File.ReadAllText(path));
         foreach (UserReg user in UserLog.Users)
         {
-            if (login.Text == user.Login && password.Password == user.Password)
+            if (login.Text.Trim() == user.Login && password.Password.Trim() == user.Password)
             {
                 if(login.Text == "admin" && password.Password == "admin")
                 {
